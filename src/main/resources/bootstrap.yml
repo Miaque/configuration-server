@@ -6,3 +6,9 @@ spring:
     config:
       server:
         git:
+          uri: https://github.com/Miaque/configuration-server
+          search-paths: configurationserver, organizationservice
+          username: Miaque
+          password: 99bbseseb
+
+
