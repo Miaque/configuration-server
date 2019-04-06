@@ -2,19 +2,17 @@ example:
   property: "I AM A PROD PROPERTY OVERRIDE"
 spring:
   jpa:
-    database: "POSTGRESQL"
-    platform:  "postgres"
-    show-sql: "true"
-    driverClassName: "org.postgresql.Driver"
+    database: mysql
+    platform: mysql
+    show-sql: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
     properties:
       hibernate:
-        dialect: "org.hibernate.dialect.PostgreSQLDialect"
-  datasource:
-    url: "jdbc:postgresql://database:5432/eagle_eye_local"
-    username: "postgres_prod"
-    password: "{cipher}217b23d6209b10bd82c49a9df6490670052a9cd9d4403dcc1288db21c35c48ac"
-    testWhileIdle: "true"
-    validationQuery: "SELECT 1"
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    datasource:
+      url: jdbc:mysql://localhost:3306/ms?serverTimezone=GMT&useUnicode=true&characterEncoding=utf8&useSSL=false
+      username: root
+      password: root
 
 redis:
   server: "redis"

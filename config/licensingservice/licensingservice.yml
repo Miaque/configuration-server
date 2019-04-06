@@ -2,19 +2,17 @@ example:
   property: "I AM IN THE DEFAULT"
 spring:
   jpa:
-    database: "POSTGRESQL"
-    platform:  "postgres"
-    show-sql: "true"
-    driverClassName: "org.postgresql.Driver"
+    database: mysql
+    platform: mysql
+    show-sql: true
+    driver-class-name: com.mysql.cj.jdbc.Driver
     properties:
       hibernate:
-        dialect: "org.hibernate.dialect.PostgreSQLDialect"
+        dialect: org.hibernate.dialect.MySQL5Dialect
   datasource:
-    url: "jdbc:postgresql://database:5432/eagle_eye_local"
-    username: "postgres"
-    password: "{cipher}4788dfe1ccbe6485934aec2ffeddb06163ea3d616df5fd75be96aadd4df1da91"
-    testWhileIdle: "true"
-    validationQuery: "SELECT 1"
+    url: jdbc:mysql://localhost:3306/ms?serverTimezone=GMT&useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: root
 
 redis:
   server: "redis"
