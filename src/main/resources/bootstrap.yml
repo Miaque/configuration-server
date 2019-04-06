@@ -9,7 +9,8 @@ spring:
       server:
         git:
           uri: https://github.com/Miaque/configuration-server
-          search-paths: configurationserver, organizationservice
+#          search-paths: configurationserver, organizationservice
+          search-paths: /config/**
           username: Miaque
           password: 99bbseseb
 
